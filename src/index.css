@@ -82,3 +82,75 @@ h2, h3 { margin: 0; color: #1e293b; }h2 { font-size: 16px; }h3 { font-size: 15px
 @media (max-width: 760px) {
   .sidebar { width: 64px; }.brand { padding: 0 15px; }.brand > div, .sidebar nav button:not(.active) i, .sidebar nav button { font-size: 0; }.sidebar nav button span { font-size: 17px; }.side-bottom > div:not(.profile) { display: none; }main { margin-left: 64px; width: calc(100% - 64px); }header { padding: 0 15px; }.breadcrumb, .saved { display: none; }.mobile-brand { display: block; font-weight: 700; color: #17365d; }.search { width: 160px; }.content { padding: 24px 18px; }.page-head { align-items: flex-start; gap: 15px; }.stats { grid-template-columns: 1fr; }.dashboard-grid { display: block; }.panel { margin-bottom: 14px; }.form-grid, .form-grid.three, .select-cards, .category-grid { grid-template-columns: 1fr; }.field.full { grid-column: auto; }.builder-shell, .preview-page { margin: -24px -18px; }.builder-layout { grid-template-columns: 105px minmax(310px,1fr); }.slide-rail { padding: 6px; }.thumb { width: 74px; }.canvas-area { padding: 10px; }.preview-stage { grid-template-columns: 90px 1fr; }.preview-thumbs { padding: 5px; }.preview-center { padding: 10px; }.preview-head { padding: 0 8px; }.preview-head .btn:disabled { display: none; }
 }
+
+
+/* Samsung Life-inspired visual system */
+:root {
+  --sl-blue: #0756b8;
+  --sl-blue-deep: #003b78;
+  --sl-blue-bright: #1268e8;
+  --sl-blue-soft: #eaf3ff;
+  --sl-ink: #142b49;
+  --sl-muted: #64758b;
+  --sl-border: #dce6f2;
+  font-family: "Pretendard", "SamsungOne", "Noto Sans KR", "Malgun Gothic", sans-serif;
+  color: var(--sl-ink);
+  background: #f4f7fc;
+}
+body { background: #f4f7fc; font-family: "Pretendard", "SamsungOne", "Noto Sans KR", "Malgun Gothic", sans-serif; }
+.sidebar { background: linear-gradient(180deg, #003b78 0%, #062e5c 100%); }
+.brand { border-bottom-color: rgba(255,255,255,.13); }
+.brand-mark { border: 0; background: #fff; color: var(--sl-blue-deep); border-radius: 9px; font-size: 11px; letter-spacing: -.04em; }
+.brand strong { letter-spacing: -.025em; }
+.sidebar nav { padding-top: 20px; }
+.sidebar nav button { border-radius: 8px; transition: background .18s ease, color .18s ease; }
+.sidebar nav button:hover { background: rgba(255,255,255,.09); }
+.sidebar nav button.active { background: #fff; color: var(--sl-blue-deep); box-shadow: 0 4px 14px rgba(0,0,0,.08); font-weight: 750; }
+.sidebar nav button.active span { color: var(--sl-blue); }
+.side-bottom { border-top-color: rgba(255,255,255,.14); }
+.profile { border-radius: 9px; background: rgba(255,255,255,.14); }
+header { box-shadow: 0 2px 10px rgba(16,49,87,.035); border-bottom-color: var(--sl-border); }
+.breadcrumb { color: var(--sl-muted); }
+.search { border-color: var(--sl-border); background: #f8fbff; border-radius: 8px; }
+.search:focus-within { border-color: var(--sl-blue); box-shadow: 0 0 0 3px rgba(7,86,184,.09); }
+.btn { border-radius: 8px; min-height: 38px; font-weight: 700; }
+.btn-primary { background: var(--sl-blue); box-shadow: 0 3px 8px rgba(7,86,184,.13); }
+.btn-primary:hover { background: var(--sl-blue-deep); }
+.btn-secondary, .btn-ghost { border-radius: 8px; }
+.btn-ghost { color: var(--sl-blue); border-color: #cbdcf1; }
+.content { padding-top: 32px; }
+.eyebrow { color: var(--sl-blue); letter-spacing: .12em; }
+h1 { color: var(--sl-ink); letter-spacing: -.04em; font-weight: 800; }
+h2, h3 { color: var(--sl-ink); letter-spacing: -.02em; }
+.sample-note, .demo-warning { border-radius: 9px; background: #edf5ff; border-color: #d4e6ff; color: #345a86; }
+.sample-note span { background: var(--sl-blue); }
+.stat, .panel { border-color: var(--sl-border); border-radius: 12px; box-shadow: 0 3px 12px rgba(20,55,95,.035); overflow: hidden; }
+.stat { transition: transform .18s ease, box-shadow .18s ease; }
+.stat:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(20,55,95,.07); }
+.stat-icon { border-radius: 10px; background: var(--sl-blue-soft); color: var(--sl-blue); }
+.stat strong { color: var(--sl-ink); letter-spacing: -.03em; }
+.panel-head { border-bottom-color: #eaf0f7; }
+.panel-head button, .tools b, .tools em { color: var(--sl-blue); }
+th { background: #f5f8fd; color: #64758b; }
+td { border-top-color: #edf2f8; }
+.table-link { color: var(--sl-ink); }
+.status { border-radius: 6px; }
+.status-작성중 { background: #eaf3ff; color: #0756b8; }
+.people > div > span, .customer-cell span { border-radius: 9px; background: #eaf3ff; color: var(--sl-blue); }
+.tools > button { border-radius: 9px; }
+.tools > button:hover { background: #f4f8ff; }
+.tools > button > span { border-radius: 9px; background: var(--sl-blue-soft); color: var(--sl-blue); }
+.tabs button { border-radius: 7px; }
+.tabs button.active { background: var(--sl-blue); border-color: var(--sl-blue); }
+.field input, .field select, .field textarea { border-radius: 7px; border-color: #d6e1ee; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: 0; border-color: var(--sl-blue); box-shadow: 0 0 0 3px rgba(7,86,184,.09); }
+.modal { border-radius: 14px; overflow: auto; }
+.modal-head { border-bottom-color: #eaf0f7; }
+@media (max-width: 900px) {
+  .content { padding: 24px 20px 36px; }
+  header { padding: 0 20px; }
+}
+@media (max-width: 600px) {
+  .content { padding: 20px 14px 28px; }
+  header { padding: 0 14px; }
+}
